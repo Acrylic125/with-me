@@ -11,5 +11,11 @@
       "matches": ["*://*/*"],
       "js": ["src/content/highlighter.ts"]
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["*://*/*"],
+      "resources": ["src/content/highlighter.css"]
+    }
   ]
 }

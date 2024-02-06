@@ -1,4 +1,11 @@
+import "./highlighter.css";
 console.log("Hello there!");
+
+const texts = {
+  the: {
+    description: "The most common word in English",
+  },
+};
 
 function highlightText(keyword: string) {
   const textNode = document.querySelector("*");
@@ -7,11 +14,13 @@ function highlightText(keyword: string) {
     textNode.innerHTML = textNode.innerHTML.replace(
       // Regular expression for case-insensitive search
       new RegExp(keyword, "gi"),
-      `<span style='background-color: yellow'>${keyword}</span>`
+      `<span class="highlighted-elemented">${keyword}</span>`
+      // `<span style='background-color: yellow'>${keyword}</span>`
     );
   }
 }
-highlightText("the");
+
+highlightText("build");
 
 // chrome.action.onClicked.addListener(() => {
 //   //   // Retrieve highlight keyword from storage or options page
