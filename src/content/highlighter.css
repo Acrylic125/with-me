@@ -1,4 +1,9 @@
 .highlighted-elemented {
+  background-color: #fbbf247f;
+}
+
+.highlighted-elemented:hover {
+  /* background-color: #fbbf24; */
   background-color: #f59e0b;
 }
 
