@@ -1,8 +1,8 @@
-.highlighted-elemented {
+.highlightedElemented {
   background-color: #fbbf247f;
 }
 
-.highlighted-elemented:hover {
+.highlightedElemented:hover {
   /* background-color: #fbbf24; */
   background-color: #f59e0b;
 }
@@ -17,7 +17,7 @@
   all: unset;
 }
 
-.highlighted-menu {
+.highlightedMenu {
   display: flex;
   position: fixed;
   z-index: 100000;

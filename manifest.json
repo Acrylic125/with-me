@@ -15,7 +15,7 @@
   "web_accessible_resources": [
     {
       "matches": ["*://*/*"],
-      "resources": ["src/content/highlighter.css"]
+      "resources": ["src/content/highlighter.module.css"]
     }
   ]
 }

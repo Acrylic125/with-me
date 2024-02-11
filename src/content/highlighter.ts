@@ -1,6 +1,4 @@
-import "./highlighter.css";
-import test from "./test.module.css";
-console.log(test.test);
+import highlighterCss from "./highlighter.module.css";
 console.log("Hello there!");
 
 const texts = {
@@ -21,11 +19,11 @@ function highlightText(keyword: string, description: string) {
     textNode.innerHTML = textNode.innerHTML.replace(
       // Regular expression for case-insensitive search
       new RegExp(keyword, "gi"),
-      `<span class="highlighted-elemented" data-highlighted-element-keyword="${keyword}">${keyword}</span>`
+      `<span class="${highlighterCss.highlightedElemented}" data-highlighted-element-keyword="${keyword}">${keyword}</span>`
       // `<span style='background-color: yellow'>${keyword}</span>`
     );
   }
-  const highlighted = document.querySelectorAll(`.highlighted-elemented[data-highlighted-element-keyword="${keyword}"]`);
+  const highlighted = document.querySelectorAll(`.${highlighterCss.highlightedElemented}[data-highlighted-element-keyword="${keyword}"]`);
   highlighted.forEach((element) => {
     if (!(element instanceof HTMLSpanElement)) {
       return;
@@ -41,7 +39,9 @@ function highlightText(keyword: string, description: string) {
       }
       // Create a menu element
       const menuHtml = `
-        <div class="unset highlighted-menu" style="top: ${element.offsetTop + 20}px; left: ${element.offsetLeft}px;">
+        <div class="${highlighterCss.unset} ${highlighterCss.highlightedMenu}" style="top: ${element.offsetTop + 20}px; left: ${
+        element.offsetLeft
+      }px;">
           ${description}
         </div>
       `;
