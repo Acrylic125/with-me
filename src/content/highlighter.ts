@@ -29,7 +29,7 @@ function highlightText(keyword: string, description: string) {
       return;
     }
     element.onclick = () => {
-      document.querySelectorAll(".highlighted-menu").forEach((menu) => {
+      document.querySelectorAll(`.${highlighterCss.highlightedMenu}`).forEach((menu) => {
         menu.remove();
       });
       // Get body element
