@@ -1,4 +1,6 @@
 import "./highlighter.css";
+import test from "./test.module.css";
+console.log(test.test);
 console.log("Hello there!");
 
 const texts = {
@@ -29,7 +31,22 @@ function highlightText(keyword: string, description: string) {
       return;
     }
     element.onclick = () => {
-      console.log("clicked");
+      document.querySelectorAll(".highlighted-menu").forEach((menu) => {
+        menu.remove();
+      });
+      // Get body element
+      const body = document.querySelector("body");
+      if (!body) {
+        return;
+      }
+      // Create a menu element
+      const menuHtml = `
+        <div class="unset highlighted-menu" style="top: ${element.offsetTop + 20}px; left: ${element.offsetLeft}px;">
+          ${description}
+        </div>
+      `;
+      // Add menu element to body
+      body.insertAdjacentHTML("beforeend", menuHtml);
     };
   });
 }

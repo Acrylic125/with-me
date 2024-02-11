@@ -8,15 +8,24 @@
 }
 
 .unset {
+  all: initial;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.unset * {
   all: unset;
 }
 
-.highlighted-elemented.highlighted-menu {
-  display: block;
+.highlighted-menu {
+  display: flex;
   position: fixed;
   z-index: 100000;
-  top: 0;
+  /* top: 0; */
   /* left: 50%;
   right: 50%; */
   background-color: #f9fafb;
+  padding: 1em;
+  border-radius: 0.2rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
